@@ -4,6 +4,8 @@
 
 ## Overview
 
+This plug-in was initially started in https://github.com/morincer/teamcity-plugin-saml. In this repository TeamCity team provides maintenance for the plug-in as the author now doesn't have enough time to work on it. 
+
 The plug-in adds ability to authenticate users with SAML-based SSO providers (like Okta, Onelogin etc.).
 
 The plug-in offers the following functionality:
