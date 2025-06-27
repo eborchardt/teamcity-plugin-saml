@@ -1,6 +1,6 @@
 # TeamCity SAML Authentication Plug-In
 
-[![Java CI with Maven](https://github.com/morincer/teamcity-plugin-saml/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/morincer/teamcity-plugin-saml/actions/workflows/maven.yml)
+[![Build status](https://teamcity.jetbrains.com/guestAuth/app/rest/builds/buildType:TeamCityPluginsByJetBrains_TeamcityPluginSaml_Build/statusIcon)](https://teamcity.jetbrains.com/viewType.html?buildTypeId=TeamCityPluginsByJetBrains_TeamcityPluginSaml_Build)
 
 ## Overview
 
