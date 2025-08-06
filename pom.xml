@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jetbrains.teamcity</groupId>
     <artifactId>saml-authentication</artifactId>
-    <version>1.4.4-SNAPSHOT</version>
+    <version>1.4.5-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -72,3 +72,4 @@
         <module>build</module>
     </modules>
 </project>
+

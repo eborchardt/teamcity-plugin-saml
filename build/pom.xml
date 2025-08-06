@@ -4,7 +4,7 @@
     <parent>
         <artifactId>saml-authentication</artifactId>
         <groupId>org.jetbrains.teamcity</groupId>
-        <version>1.4.4-SNAPSHOT</version>
+        <version>1.4.5-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -94,3 +94,4 @@
         </plugins>
     </build>
 </project>
+
