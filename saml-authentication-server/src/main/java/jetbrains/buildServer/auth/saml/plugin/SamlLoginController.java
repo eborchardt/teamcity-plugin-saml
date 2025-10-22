@@ -49,6 +49,20 @@ public class SamlLoginController extends BaseController {
         try {
             LOG.info(String.format("Initiating SSO login at %s", httpServletRequest.getRequestURL()));
 
+            // Ensure the stale TeamCity session cookie doesn't force extra IdP auth.
+            // Some browsers may keep TCSESSIONID after TeamCity logout. Clear it proactively
+            // when SSO login is initiated to avoid double authentication on IdP side.
+            try {
+                javax.servlet.http.Cookie cookie = new javax.servlet.http.Cookie("TCSESSIONID", "");
+                cookie.setPath("/");
+                cookie.setMaxAge(0); // expire immediately
+                cookie.setHttpOnly(true);
+                cookie.setSecure(httpServletRequest.isSecure());
+                httpServletResponse.addCookie(cookie);
+            } catch (Throwable t) {
+                LOG.warn("Failed to clear TCSESSIONID cookie before SSO initiation: " + t.getMessage(), t);
+            }
+
             var settings = settingsStorage.load();
 
             var endpoint = settings.getSsoEndpoint();
